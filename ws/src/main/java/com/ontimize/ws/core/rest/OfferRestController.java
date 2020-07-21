@@ -1,5 +1,6 @@
 package com.ontimize.ws.core.rest;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
@@ -14,14 +15,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ontimize.api.core.service.IOfferService;
 import com.ontimize.db.EntityResult;
 import com.ontimize.db.SQLStatementBuilder;
 import com.ontimize.db.SQLStatementBuilder.BasicExpression;
-import com.ontimize.db.SQLStatementBuilder.BasicField;
 import com.ontimize.db.SQLStatementBuilder.BasicOperator;
-import com.ontimize.jee.server.rest.ORestController;
+import com.ontimize.db.SQLStatementBuilder.BasicField;
+import com.ontimize.api.core.service.IOfferService;
 import com.ontimize.model.core.dao.OfferDao;
+import com.ontimize.jee.server.rest.ORestController;
 
 @RestController
 @RequestMapping("/offers")
@@ -91,4 +92,5 @@ public class OfferRestController extends ORestController<IOfferService> {
 		BasicExpression bexp2 = new BasicExpression(field, BasicOperator.LESS_OP, endDate);
 		return new BasicExpression(bexp1, BasicOperator.AND_OP, bexp2);
 	}
+
 }

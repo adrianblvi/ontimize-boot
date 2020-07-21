@@ -12,6 +12,7 @@
 		<Column>ID</Column>
 	</UpdateKeys>
 	<GeneratedKey>ID</GeneratedKey>
+
 	<Queries>
 		<Query id="details">
 			<AmbiguousColumns>
