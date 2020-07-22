@@ -1,0 +1,43 @@
+<mat-toolbar color="primary"> {{"CANDIDATES"|oTranslate}}</mat-toolbar>
+<o-grid #grid cols=3 title="{{ 'CANDIDATES' | oTranslate }}" attr="candidates" service="candidates" entity="candidate"
+  keys="ID"
+  columns="ID;PHOTO;NAME;SURNAME;EMAIL,BIRTHDAY;DNI;PHONE;EMAIL;EDUCATION;SPECIALTIES;STATUS;ORIGIN;WAGE_LEVEL;EXPERIENCE_LEVEL;PROFILE;COMMENT;LINKEDIN"
+  visible-columns="PHOTO;NAME;SURNAME;EMAIL,BIRTHDAY;PHONE;EMAIL;EDUCATION;STATUS;SPECIALTIES;ORIGIN;PROFILE;COMMENT;LINKEDIN"
+  pagination-controls="false" orderable=yes sortable-columns="NAME;EMAIL" show-page-size="yes"
+  page-size-options="24;32;64">
+  <o-grid-item *ngFor="let list of grid.dataArray">
+    <o-column layout-padding class="container-item">
+      <o-image attr="candidateImage" empty-image="assets/images/no-image.png" style="margin-top:6px"
+        data={{list.PHOTO}}>
+      </o-image>
+      <h4>
+        <mat-icon>account_circle</mat-icon> {{list.NAME}} {{list.SURNAME}}
+      </h4>
+      <div class="date">
+        <p>
+          <mat-icon>cake</mat-icon>
+          {{ list.BIRTHDAY | date:"dd/MM/yyyy" }}
+        </p>
+      </div>
+      <div class="email">
+        <p>
+          <mat-icon>email </mat-icon>
+          {{ list.EMAIL }}
+        </p>
+      </div>
+      <div class="ID">
+        <p>
+          <mat-icon>phone </mat-icon>
+          {{ list.PHONE }}
+        </p>
+      </div>
+      <div class="ID">
+        <p>
+          <mat-icon>business_center </mat-icon>
+          {{ list.SPECIALTIES }}
+        </p>
+      </div>
+
+    </o-column>
+  </o-grid-item>
+</o-grid>
