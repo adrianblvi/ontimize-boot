@@ -15,5 +15,12 @@
   "ERROR_PASS_REQUIRED": "Incorrect password.",
   "ERROR_USER_PASS_INCORRECT": "Invalid username or password.",
   "OFFERS":"Offers",
-  "CANDIDATES": "Candidates"
+  "CANDIDATES": "Candidates",
+  "ACRONYM":"Acronym",
+  "APPLICANT":"Applicant",
+  "STARTDATE":" Start Date",
+  "ENDDATE":"End Date",
+  "DESCRIPTION":" Description",
+  "OFFER_STATUS":" Offer Status",
+  "CANDIDATES_PERSONAL_INFORMATION":"CANDIDATES PERSONAL INFORMATION"
 }

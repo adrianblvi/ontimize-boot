@@ -15,5 +15,12 @@
   "ERROR_PASS_REQUIRED": "Contraseña incorrecta.",
   "ERROR_USER_PASS_INCORRECT": "Usuario o contraseña incorrecta.",
   "OFFERS": "Ofertas",
-  "CANDIDATES": "Candidatos"
+  "CANDIDATES": "Candidatos",
+  "ACRONYM":" Acrónimo",
+  "APPLICANT":"Solicitante",
+  "STARTDATE":" Fecha de Inicio",
+  "ENDDATE":"Fecha Fin",
+  "DESCRIPTION":" Descripción",
+  "OFFER_STATUS":"Estado de la Oferta",
+  "CANDIDATES_PERSONAL_INFORMATION": "INFORMACIÓN PERSONAL DE LOS CANDIDATOS"
 }

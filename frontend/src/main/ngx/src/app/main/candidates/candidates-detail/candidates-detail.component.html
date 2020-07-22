@@ -1,3 +1,23 @@
-<p>
-  candidates-detail works!
-</p>
+<o-form service="candidates" entity="candidate" keys="ID" header-actions="R;I;U;D" show-header-navigation="no">
+  <o-text-input attr="ID" sql-type="INTEGER" enabled="no"></o-text-input>
+  <o-row>
+    <o-column>
+      <o-image id="PHOTO" attr="PHOTO" empty-image="assets/images/no-image.png" sql-type="OTHER"></o-image>
+    </o-column>
+    <mat-tab-group fxFlex>
+      <mat-tab label="{{ 'CANDIDATES_PERSONAL_INFORMATION' | oTranslate }}">
+        <o-column fxFlex layout-padding>
+          <o-row>
+            <o-text-input class="input-padding" attr="NAME" fxFlex="40" required="yes"></o-text-input>
+            <o-text-input class="input-padding" attr="SURNAME" fxFlex="40" required="yes"></o-text-input>
+            <o-date-input attr="STARTDATE" fxFlex="20"></o-date-input>
+          </o-row>
+
+        </o-column>
+      </mat-tab>
+      <mat-tab label=" CURRICULUM VITAE ">
+
+      </mat-tab>
+    </mat-tab-group>
+  </o-row>
+</o-form>
