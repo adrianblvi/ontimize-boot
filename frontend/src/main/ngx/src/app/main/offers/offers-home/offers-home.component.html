@@ -2,6 +2,11 @@
     <o-table fxFlex title="{{ 'OFFERS' | oTranslate }}" attr="offers" service="offers" entity="offer" keys="ID"
         columns="ID;ACRONYM;DESCRIPTION;APPLICANT;OFFER_STATUS;CREATION_DATE;START_DATE;END_DATE"
         visible-columns="ACRONYM;APPLICANT;START_DATE;END_DATE;DESCRIPTION;OFFER_STATUS" query-rows="20">
+        <o-table-column>
+            <o-combo attr="OFFER_STATUS" service="offers" entity="offerStatus" columns="ID;DESCRIPTION"
+                value-column="ID" keys="ID" visible-columns="DESCRIPTION">
+            </o-combo>
+        </o-table-column>
         <o-table-column attr="START_DATE" title="STARTDATE" type="date" format="LL"></o-table-column>
         <o-table-column attr="END_DATE" title="ENDDATE" type="date" format="LL"></o-table-column>
     </o-table>

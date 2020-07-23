@@ -42,18 +42,7 @@ public class CandidateService implements ICandidateService {
 	@Override
 	@Transactional(rollbackFor = Exception.class)
 
-	/**
-	 * This method adds a new candidate. It removes from the parameters those items
-	 * not directly belonging to the table of candidates in case of that are of the
-	 * {@link String} type. Look for the identifier of this data in case that they
-	 * exist or adds them to the corresponding tables, and associates them with the
-	 * correct identifier. Then add these new elements to the list of applicant's
-	 * items and performs the insert of a new candidate
-	 * 
-	 * 
-	 * @param attrMap A {@link Map} containing the data of the new candidate to be
-	 *                inserted.
-	 */
+	
 
 	public EntityResult candidateInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException {
 		Map<String, Object> nonCandidateData = removeNonRelatedData(attrMap, CandidateDao.ATTR_EDUCATION,
@@ -68,20 +57,7 @@ public class CandidateService implements ICandidateService {
 	@Override
 	@Transactional(rollbackFor = Exception.class)
 
-	/**
-	 * This method updates a candidate. It removes from the parameters those items
-	 * not directly belonging to the table of candidates in case of that are of the
-	 * {@link String} type. Look for the identifier of this data in case that they
-	 * exist or adds them to the corresponding tables, and associates them with the
-	 * correct identifier. Then add these new elements to the list of applicant's
-	 * items and performs the update of a candidate
-	 * 
-	 * 
-	 * @param attrMap A {@link Map} containing the data of the candidate to be
-	 *                updated.
-	 * @param keyMap  A {@link Map} containing the identification of the candidate
-	 *                to be updated.
-	 */
+	
 
 	public EntityResult candidateUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap)
 			throws OntimizeJEERuntimeException {
@@ -99,17 +75,7 @@ public class CandidateService implements ICandidateService {
 		return this.daoHelper.delete(this.candidateDao, keyMap);
 	}
 
-	/**
-	 * It removes from a map all the keys and values of the map that match those
-	 * keys in their following parameters and returns a map with the extracted keys
-	 * and values
-	 * 
-	 * @param attrMap       A {@link Map} with all keys
-	 * @param attrToExclude Multiple {@link String} that can be found as key of
-	 *                      {@code attrMap}
-	 * @return A {@link Map} with all of the keys and values removed from
-	 *         {@code attrMap}
-	 */
+	
 
 	private Map<String, Object> removeNonRelatedData(Map<String, Object> attrMap, String... attrToExclude) {
 		HashMap<String, Object> data = new HashMap<String, Object>();

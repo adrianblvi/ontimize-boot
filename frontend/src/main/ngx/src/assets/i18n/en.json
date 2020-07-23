@@ -27,5 +27,17 @@
   "HR":"Human Resources",
   "CREATION_DATE":"Creation Date",
   "END_DATE":"End Date",
-  "START_DATE":"Start Date"
+  "START_DATE":"Start Date",
+  "EDUCATION": "Education",
+  "EXPERIENCE_LEVEL":"Experience Level",
+  "SPECIALTIES":"Special Ties",
+  "STATUS":"Status",
+  "NAME":"Name",
+  "SURNAME":"Surname",
+  "BIRTHDAY":"Birthday",
+  "EMAIL":"Email",
+  "ORIGIN":"Origin",
+  "PROFILE":"Profile",
+  "WAGE_LEVEL": "Wage Level",
+  "COMMENT":"Comment"
 }
