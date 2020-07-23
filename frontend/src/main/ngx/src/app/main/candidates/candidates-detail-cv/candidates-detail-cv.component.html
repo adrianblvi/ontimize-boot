@@ -1,0 +1,14 @@
+<o-form service="candidates" entity="curriculum" keys="ID"
+  columns="ID;ID_CANDIDATE;EXPERIENCE;IDIOM;DRIVING_LICENSE;CAR" visible-columns="EXPERIENCE;IDIOM;DRIVING_LICENSE;CAR"
+  header-actions="no" show-header-navigation="no" header-actions="R;U">
+  <o-integer-input attr="ID_CANDIDATE" sql-type="INTEGER" enabled="no"></o-integer-input>
+  <o-row>
+    <o-text-input class="input-padding" attr="EXPERIENCE" fxFlex="50"></o-text-input>
+    <o-text-input class="input-padding" attr="IDIOM" fxFlex="50"></o-text-input>
+  </o-row>
+  <o-row>
+    <o-text-input class="input-padding" attr="IDIOM" fxFlex="70"></o-text-input>
+    <o-checkbox attr="CAR" boolean-type="boolean" read-only="no" false-value="false" true-value="true" fxFlex="30">
+    </o-checkbox>
+  </o-row>
+</o-form>

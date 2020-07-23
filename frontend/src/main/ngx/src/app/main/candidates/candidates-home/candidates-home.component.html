@@ -1,5 +1,5 @@
 <mat-toolbar color="primary"> {{"CANDIDATES"|oTranslate}}</mat-toolbar>
-<o-grid #grid cols=3 attr="candidates" service="candidates" entity="candidate" keys="ID"
+<o-grid #grid  attr="candidates" service="candidates" entity="candidate" keys="ID"
   columns="ID;PHOTO;NAME;SURNAME;EMAIL,BIRTHDAY;DNI;PHONE;EMAIL;EDUCATION;SPECIALTIES;STATUS;ORIGIN;WAGE_LEVEL;EXPERIENCE_LEVEL;PROFILE;COMMENT;LINKEDIN"
   visible-columns="PHOTO;NAME;SURNAME;EMAIL,BIRTHDAY;PHONE;EMAIL;EDUCATION;STATUS;SPECIALTIES;WAGE_LEVEL;ORIGIN;EXPERIENCE_LEVEL;PROFILE;COMMENT;LINKEDIN"
   pagination-controls="false" orderable=yes sortable-columns="NAME;EMAIL" page-size-options="24;32;64">

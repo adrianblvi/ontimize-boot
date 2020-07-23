@@ -41,5 +41,7 @@
   "WAGE_LEVEL": "Rango de Salario",
   "COMMENT":"Comentarios",
   "PREVIOUS EXPERIENCE":" Experiencia Previa",
-  "IDIOMS":"Idiomas"
+  "IDIOMS":"Idiomas",
+  "CURRICULUM_INFORMATION":"Información del Curriculum",
+  "VIEW_CV":"Ver Curriculum"
 }

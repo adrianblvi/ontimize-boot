@@ -41,20 +41,20 @@
             </o-combo>
             <o-text-input attr="WAGE_LEVEL" class="input-padding" step="5" grouping="no" fxFlex="25"></o-text-input>
           </o-row>
+
           <o-row>
             <o-textarea-input attr="COMMENT" fxFlex></o-textarea-input>
           </o-row>
+          <o-row></o-row>
+          <o-row>
+            <p>{{'CURRICULUM_INFORMATION'|oTranslate}}<o-button type="ICON" icon="insert_drive_file"
+                routerLinkActive="active">
+              </o-button>
+            </p>
+            <!-- <o-button type="ICON" icon="insert_drive_file" routerLinkActive="active" routerLink="{{url }}/ID">
+                  Curriculum</o-button>-->
+          </o-row>
         </o-column>
-      </mat-tab>
-      <mat-tab label=" CURRICULUM VITAE ">
-        <o-row title="{{'PREVIOUS EXPERIENCE'| oTranslate}}">
-          
-        </o-row>
-        <o-row title="{{'IDIOMS'|oTranslate}}">
-
-        </o-row>
-
-
       </mat-tab>
     </mat-tab-group>
   </o-row>
