@@ -1,0 +1,32 @@
+<o-form service="offers" entity="offer" keys="ID" header-actions="R;I;U;D" show-header-navigation="no">
+  <o-text-input attr="ID" sql-type="INTEGER" enabled="no"></o-text-input>
+  <o-row>
+    <o-column title-label="OFFER_INFORMATION" fxFlex>
+      <o-row>
+        <o-text-input class="input-padding" attr="ACRONYM" fxFlex="40" required="yes"></o-text-input>
+        <o-text-input class="input-padding" attr="APPLICANT" fxFlex="40" required="yes"></o-text-input>
+      </o-row>
+      <o-row>
+        <o-column fxFlex="60">
+          <o-date-input attr="CREATION_DATE" fxFlex="40"></o-date-input>
+        </o-column>
+        <o-column fxFlex="40">
+          <o-combo attr="OFFER_STATUS" service="offers" entity="offerStatus" columns="ID;DESCRIPTION" value-column="ID"
+            keys="ID" visible-columns="DESCRIPTION" width="33%">
+          </o-combo>
+        </o-column>
+      </o-row>
+      <o-row>
+        <o-column fxFlex="20">
+          <o-date-input attr="START_DATE" fxFlex></o-date-input>
+        </o-column>
+        <o-column fxFlex="20">
+          <o-date-input attr="END_DATE" fxFlex></o-date-input>
+        </o-column>
+      </o-row>
+      <o-row>
+        <o-textarea-input attr="DESCRIPTION" fxFlex></o-textarea-input>
+      </o-row>
+    </o-column>
+  </o-row>
+</o-form>

@@ -8,7 +8,7 @@ const routes: Routes = [
     component: CandidatesHomeComponent
   },
   {
-    path: ':ID',
+    path: ":ID",
     component: CandidatesDetailComponent
   }
 ];

@@ -22,5 +22,10 @@
   "ENDDATE":"Fecha Fin",
   "DESCRIPTION":" Descripción",
   "OFFER_STATUS":"Estado de la Oferta",
-  "CANDIDATES_PERSONAL_INFORMATION": "INFORMACIÓN PERSONAL DE LOS CANDIDATOS"
+  "CANDIDATES_PERSONAL_INFORMATION": "INFORMACIÓN PERSONAL DE LOS CANDIDATOS",
+  "VIEW_LIST":"Ver Lista",
+  "HR": "Recursos Humanos",
+  "CREATION_DATE":"Fecha de Creación",
+  "END_DATE":"Fecha Fin",
+  "START_DATE":"Fecha Inicio"
 }
