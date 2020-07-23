@@ -7,16 +7,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 
-import com.ontimize.db.EntityResult;
 import com.ontimize.api.core.service.IMasterService;
-import com.ontimize.model.core.dao.CurriculumDao;
+import com.ontimize.db.EntityResult;
+import com.ontimize.jee.common.exceptions.OntimizeJEERuntimeException;
+import com.ontimize.jee.server.dao.DefaultOntimizeDaoHelper;
 import com.ontimize.model.core.dao.EducationDao;
 import com.ontimize.model.core.dao.ExperienceLevelDao;
 import com.ontimize.model.core.dao.OriginDao;
 import com.ontimize.model.core.dao.ProfileDao;
 import com.ontimize.model.core.dao.StatusDao;
-import com.ontimize.jee.common.exceptions.OntimizeJEERuntimeException;
-import com.ontimize.jee.server.dao.DefaultOntimizeDaoHelper;
 
 @Service("MasterService")
 @Lazy
@@ -32,8 +31,7 @@ public class MasterService implements IMasterService {
 	private ProfileDao profileDao;
 	@Autowired
 	private StatusDao statusDao;
-	@Autowired
-	private CurriculumDao curriculumDao;
+	
 	@Autowired
 	private DefaultOntimizeDaoHelper daoHelper;
 
@@ -147,26 +145,6 @@ public class MasterService implements IMasterService {
 		return this.daoHelper.delete(this.statusDao, keyMap);
 	}
 
-	@Override
-	public EntityResult curriculumQuery(Map<String, Object> keyMap, List<String> attrList)
-			throws OntimizeJEERuntimeException {
-		return this.daoHelper.query(this.curriculumDao, keyMap, attrList);
-	}
-
-	@Override
-	public EntityResult curriculumInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException {
-		return this.daoHelper.insert(this.curriculumDao, attrMap);
-	}
-
-	@Override
-	public EntityResult curriculumUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap)
-			throws OntimizeJEERuntimeException {
-		return this.daoHelper.update(this.curriculumDao, attrMap, keyMap);
-	}
-
-	@Override
-	public EntityResult curriculumDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException {
-		return this.daoHelper.delete(this.curriculumDao, keyMap);
-	}
+	
 
 }

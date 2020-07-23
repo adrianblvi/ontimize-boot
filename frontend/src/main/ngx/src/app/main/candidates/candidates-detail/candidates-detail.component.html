@@ -24,8 +24,8 @@
             <o-combo attr="EDUCATION" service="master" entity="education" columns="ID;DESCRIPTION" value-column="ID"
               keys="ID" visible-columns="DESCRIPTION" fxFlex="40">
             </o-combo>
-            <o-combo attr="EXPERIENCE_LEVEL" service="master" entity="experienceLevel" columns="ID;DESCRIPTION" value-column="ID"
-              keys="ID" visible-columns="DESCRIPTION" fxFlex="40">
+            <o-combo attr="EXPERIENCE_LEVEL" service="master" entity="experienceLevel" columns="ID;DESCRIPTION"
+              value-column="ID" keys="ID" visible-columns="DESCRIPTION" fxFlex="40">
             </o-combo>
             <o-text-input attr="SPECIALTIES" class="input-padding" step="5" grouping="no" fxFlex="20"></o-text-input>
           </o-row>
@@ -47,6 +47,14 @@
         </o-column>
       </mat-tab>
       <mat-tab label=" CURRICULUM VITAE ">
+        <o-row title="{{'PREVIOUS EXPERIENCE'| oTranslate}}">
+          
+        </o-row>
+        <o-row title="{{'IDIOMS'|oTranslate}}">
+
+        </o-row>
+
+
       </mat-tab>
     </mat-tab-group>
   </o-row>

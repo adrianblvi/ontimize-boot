@@ -16,6 +16,7 @@ import com.ontimize.db.EntityResult;
 import com.ontimize.jee.common.exceptions.OntimizeJEERuntimeException;
 import com.ontimize.jee.server.dao.DefaultOntimizeDaoHelper;
 import com.ontimize.model.core.dao.CandidateDao;
+import com.ontimize.model.core.dao.CurriculumDao;
 import com.ontimize.model.core.dao.EducationDao;
 import com.ontimize.model.core.dao.ExperienceLevelDao;
 import com.ontimize.model.core.dao.OriginDao;
@@ -32,6 +33,8 @@ public class CandidateService implements ICandidateService {
 	private DefaultOntimizeDaoHelper daoHelper;
 	@Autowired
 	private MasterService masterService;
+	@Autowired
+	private CurriculumDao curriculumDao;
 
 	@Override
 	public EntityResult candidateQuery(Map<String, Object> keyMap, List<String> attrList)
@@ -41,8 +44,6 @@ public class CandidateService implements ICandidateService {
 
 	@Override
 	@Transactional(rollbackFor = Exception.class)
-
-	
 
 	public EntityResult candidateInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException {
 		Map<String, Object> nonCandidateData = removeNonRelatedData(attrMap, CandidateDao.ATTR_EDUCATION,
@@ -56,8 +57,6 @@ public class CandidateService implements ICandidateService {
 
 	@Override
 	@Transactional(rollbackFor = Exception.class)
-
-	
 
 	public EntityResult candidateUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap)
 			throws OntimizeJEERuntimeException {
@@ -74,8 +73,6 @@ public class CandidateService implements ICandidateService {
 	public EntityResult candidateDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException {
 		return this.daoHelper.delete(this.candidateDao, keyMap);
 	}
-
-	
 
 	private Map<String, Object> removeNonRelatedData(Map<String, Object> attrMap, String... attrToExclude) {
 		HashMap<String, Object> data = new HashMap<String, Object>();
@@ -154,4 +151,25 @@ public class CandidateService implements ICandidateService {
 		}
 	}
 
+	@Override
+	public EntityResult curriculumQuery(Map<String, Object> keyMap, List<String> attrList)
+			throws OntimizeJEERuntimeException {
+		return this.daoHelper.query(this.curriculumDao, keyMap, attrList);
+	}
+
+	@Override
+	public EntityResult curriculumInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException {
+		return this.daoHelper.insert(this.curriculumDao, attrMap);
+	}
+
+	@Override
+	public EntityResult curriculumUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap)
+			throws OntimizeJEERuntimeException {
+		return this.daoHelper.update(this.curriculumDao, attrMap, keyMap);
+	}
+
+	@Override
+	public EntityResult curriculumDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException {
+		return this.daoHelper.delete(this.curriculumDao, keyMap);
+	}
 }

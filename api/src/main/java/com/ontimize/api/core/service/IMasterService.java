@@ -63,15 +63,5 @@ public interface IMasterService {
 
 	public EntityResult statusDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
 
-	// CURRICULUM
-
-	public EntityResult curriculumQuery(Map<String, Object> keyMap, List<String> attrList)
-			throws OntimizeJEERuntimeException;
-
-	public EntityResult curriculumInsert(Map<String, Object> attrMap) throws OntimizeJEERuntimeException;
-
-	public EntityResult curriculumUpdate(Map<String, Object> attrMap, Map<String, Object> keyMap)
-			throws OntimizeJEERuntimeException;
-
-	public EntityResult curriculumDelete(Map<String, Object> keyMap) throws OntimizeJEERuntimeException;
+	
 }
