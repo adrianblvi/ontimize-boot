@@ -40,8 +40,13 @@
   "PROFILE":"Perfil",
   "WAGE_LEVEL": "Rango de Salario",
   "COMMENT":"Comentarios",
-  "PREVIOUS EXPERIENCE":" Experiencia Previa",
-  "IDIOMS":"Idiomas",
+  "EXPERIENCE":" Experiencia Previa",
+  "IDIOM":"Idiomas",
   "CURRICULUM_INFORMATION":"Información del Curriculum",
-  "VIEW_CV":"Ver Curriculum"
+  "VIEW_CV":"Ver Curriculum",
+  "PROGRAMING_LANGUAGES":"Lenguajes de Programación",
+  "DRIVING_LICENSE":"Permiso de Conducir",
+  "CAR": "Vehículo propio",
+  "HOME_WORK":"Disponibilidad para trabajar desde casa",
+  "TRAVELLING":"Disponibilidad para viajar"
 }

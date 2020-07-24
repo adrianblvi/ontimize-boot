@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { OTextInputComponent } from 'ontimize-web-ngx';
 
 @Component({
   selector: 'app-candidates-detail',
@@ -7,8 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CandidatesDetailComponent implements OnInit {
 
-  constructor() { }
-
+  constructor() {
+  }
+  ngAfterContentChecked():void{
+    this.id = this.idcurriculum.getValue()
+  }
+  @ViewChild('ids') idcurriculum: OTextInputComponent
+  id: string
   ngOnInit() {
   }
 

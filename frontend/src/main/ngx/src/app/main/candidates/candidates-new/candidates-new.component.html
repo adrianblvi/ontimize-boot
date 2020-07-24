@@ -1,3 +1,49 @@
-<p>
-  candidates-new works!
-</p>
+<o-form service="candidates" entity="candidate" keys="ID" show-header-navigation="yes">
+  <o-row>
+    <o-column>
+      <o-image id="PHOTO" attr="PHOTO" empty-image="assets/images/no-image.png" sql-type="OTHER"></o-image>
+    </o-column>
+    <mat-tab-group fxFlex>
+      <mat-tab label="{{ 'CANDIDATES_PERSONAL_INFORMATION' | oTranslate }}">
+        <o-row>
+          <o-text-input class="input-padding" attr="NAME" fxFlex="50" required="yes"></o-text-input>
+          <o-text-input class="input-padding" attr="SURNAME" fxFlex="50" required="yes"></o-text-input>
+        </o-row>
+        <o-row>
+          <o-nif-input attr="DNI" fxFlex="33" required="yes"></o-nif-input>
+          <o-integer-input attr="PHONE" fxFlex="33" required="yes"></o-integer-input>
+          <o-date-input attr="BIRTHDAY" fxFlex="33" required="yes"></o-date-input>
+        </o-row>
+        <o-row>
+          <o-email-input attr="EMAIL" fxFlex="50" required="yes"></o-email-input>
+          <o-text-input class="input-padding" attr="LINKEDIN" fxFlex="50"></o-text-input>
+        </o-row>
+        <o-row>
+          <o-combo attr="EDUCATION" service="master" entity="education" columns="ID;DESCRIPTION" value-column="ID"
+            keys="ID" visible-columns="DESCRIPTION" fxFlex="40">
+          </o-combo>
+          <o-combo attr="EXPERIENCE_LEVEL" service="master" entity="experienceLevel" columns="ID;DESCRIPTION"
+            value-column="ID" keys="ID" visible-columns="DESCRIPTION" fxFlex="40">
+          </o-combo>
+          <o-text-input attr="SPECIALTIES" class="input-padding" step="5" grouping="no" fxFlex="20"></o-text-input>
+        </o-row>
+        <o-row>
+          <o-combo attr="STATUS" service="master" entity="status" columns="ID;DESCRIPTION" value-column="ID" keys="ID"
+            visible-columns="DESCRIPTION" fxFlex="25">
+          </o-combo>
+          <o-combo attr="ORIGIN" service="master" entity="origin" columns="ID;DESCRIPTION" value-column="ID" keys="ID"
+            visible-columns="DESCRIPTION" fxFlex="25">
+          </o-combo>
+          <o-combo attr="PROFILE" service="master" entity="profile" columns="ID;DESCRIPTION" value-column="ID" keys="ID"
+            visible-columns="DESCRIPTION" fxFlex="25">
+          </o-combo>
+          <o-text-input attr="WAGE_LEVEL" class="input-padding" step="5" grouping="no" fxFlex="25"></o-text-input>
+        </o-row>
+        <o-row>
+          <o-textarea-input attr="COMMENT" fxFlex></o-textarea-input>
+        </o-row>
+
+      </mat-tab>
+    </mat-tab-group>
+  </o-row>
+</o-form>

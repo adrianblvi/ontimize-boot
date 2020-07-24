@@ -40,8 +40,13 @@
   "PROFILE":"Profile",
   "WAGE_LEVEL": "Wage Level",
   "COMMENT":"Comment",
-  "PREVIOUS EXPERIENCE":" Previous Experience",
-  "IDIOMS":"Idioms",
+  "EXPERIENCE":" Previous Experience",
+  "IDIOM":"Idioms",
   "CURRICULUM_INFORMATION":"Curriculum Information",
-  "VIEW_CV":"View Curriculum"
+  "VIEW_CV":"View Curriculum",
+  "PROGRAMING_LANGUAGES":"Programing languages",
+  "DRIVING_LICENSE":" Driving license",
+  "CAR": "Own vehicle",
+  "HOME_WORK":"Availability to work from home",
+  "TRAVELLING":"Availability to travel"
 }

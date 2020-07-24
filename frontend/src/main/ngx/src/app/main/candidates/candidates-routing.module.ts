@@ -12,7 +12,7 @@ const routes: Routes = [
     path: "new",
     component: CandidatesNewComponent
   }, {
-    path: ":ID/ID",
+    path: ":ID/curriculum/:ID_CANDIDATE",
     component: CandidatesDetailCvComponent
   },
   {

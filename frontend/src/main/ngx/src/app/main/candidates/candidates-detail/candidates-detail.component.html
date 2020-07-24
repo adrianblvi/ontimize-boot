@@ -1,5 +1,5 @@
 <o-form service="candidates" entity="candidate" keys="ID" header-actions="R;I;U;D" show-header-navigation="no">
-  <o-text-input attr="ID" sql-type="INTEGER" enabled="no"></o-text-input>
+  <o-text-input #ids attr="ID" sql-type="INTEGER" enabled="no"></o-text-input>
   <o-row>
     <o-column>
       <o-image id="PHOTO" attr="PHOTO" empty-image="assets/images/no-image.png" sql-type="OTHER"></o-image>
@@ -47,12 +47,7 @@
           </o-row>
           <o-row></o-row>
           <o-row>
-            <p>{{'CURRICULUM_INFORMATION'|oTranslate}}<o-button type="ICON" icon="insert_drive_file"
-                routerLinkActive="active">
-              </o-button>
-            </p>
-            <!-- <o-button type="ICON" icon="insert_drive_file" routerLinkActive="active" routerLink="{{url }}/ID">
-                  Curriculum</o-button>-->
+            <a  [routerLink]="['curriculum',id]" queryParamsHandling preserveFragment>Curriculum</a>
           </o-row>
         </o-column>
       </mat-tab>
