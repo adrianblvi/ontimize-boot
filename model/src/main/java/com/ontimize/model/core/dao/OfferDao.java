@@ -19,5 +19,6 @@ public class OfferDao extends OntimizeJdbcDaoSupport {
 	public static final String ATTR_CREATION_DATE = "CREATION_DATE";
 	public static final String ATTR_START_DATE = "START_DATE";
 	public static final String ATTR_END_DATE = "END_DATE";
+	public static final String QUERY_DETAILS = "details";
 
 }

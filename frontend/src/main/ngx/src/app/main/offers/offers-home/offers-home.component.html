@@ -1,13 +1,22 @@
-<div fxFlex>
-    <o-table fxFlex title="{{ 'OFFERS' | oTranslate }}" attr="offers" service="offers" entity="offer" keys="ID"
-        columns="ID;ACRONYM;DESCRIPTION;APPLICANT;OFFER_STATUS;CREATION_DATE;START_DATE;END_DATE"
-        visible-columns="ACRONYM;APPLICANT;START_DATE;END_DATE;DESCRIPTION;OFFER_STATUS" query-rows="20">
-        <o-table-column>
-            <o-combo attr="OFFER_STATUS" service="offers" entity="offerStatus" columns="ID;DESCRIPTION"
-                value-column="ID" keys="ID" visible-columns="DESCRIPTION">
-            </o-combo>
-        </o-table-column>
-        <o-table-column attr="START_DATE" title="STARTDATE" type="date" format="LL"></o-table-column>
-        <o-table-column attr="END_DATE" title="ENDDATE" type="date" format="LL"></o-table-column>
-    </o-table>
-</div>
+<o-column>
+    <o-row>
+        <div fxFlex>
+            <o-list #list attr="offerList" service="offers" entity="offerDetails" keys="ID"
+                columns="ACRONYM;DESCRIPTION;APPLICANT;OFFER_STATUS;CREATION_DATE;START_DATE;END_DATE"
+                delete-button="no" insert-button="true" insert-button-position="top" insert-button-floatable="true"
+                quick-filter-columns="ACRONYM" >
+                <mat-card *ngFor="let rowData of list.dataArray" [o-list-item]="rowData">
+                    <mat-card-header>
+                        <mat-card-title class="letra"><strong>{{ rowData.ACRONYM }}</strong></mat-card-title>
+                        <mat-card-subtitle>{{ rowData.APPLICANT }} </mat-card-subtitle>
+                    </mat-card-header>
+                    <mat-card-content>
+                        <p> {{'OFFER_STATUS' | oTranslate}}: {{ rowData.OFFER_STATUS }}</p>
+                        <p>{{'START_DATE' | oTranslate }}: {{ rowData.START_DATE | date  }}</p>
+                        <p> {{'END_DATE' | oTranslate }}: {{ rowData.END_DATE | date  }}</p>
+                    </mat-card-content>
+                </mat-card>
+            </o-list>
+        </div>
+    </o-row>
+</o-column>
